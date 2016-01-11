@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Easy UI 01</title>
+	<meta charset="utf-8" />
+    <script src="../jquery-easyui-1.4.4/jquery.min.js"></script>
+    <script src="../jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
+    <link href="../jquery-easyui-1.4.4/themes/default/easyui.css" rel="stylesheet" />
+   
+</head>
+<body>
+
+    <div id="dd" title="My Dialog" style="width:400px;height:200px;">
+       Dialog Content.
+    </div>  
+
+
+    <script type="text/javascript">
+        //$.messager.alert('提示', '快过年了！');
+        //$.messager.alert('提示', '快过年了！', 'error');
+        //$.messager.alert('提示', '快过年了！', 'info');
+        //$.messager.alert('提示', '快过年了！', 'warning');
+        //$.messager.alert(年'提示', '快过了！', 'question');
+
+        //$.messager.confirm('提示', '快过年了！', function (m) {
+        //    if (m) {
+        //        $.messager.alert('提示', '快过年了！', 'info');
+        //    } else {
+        //        $.messager.alert('提示', '快过年了！', 'error');
+        //    }
+        //});
+
+        //$.messager.prompt('提示', '快过年了！', function (m) {
+        //    $.messager.alert('提示',m,'info');
+        //});
+
+        //$.messager.progress({
+        //    title: "提示",
+        //    msg: '快过年了！',
+        //    text: '正在准备年货... ...',
+        //    interval:100
+        //});
+
+        $.messager.show({
+            title: "提示",
+            msg: '快过年了！',
+            timeout: 3000,
+            showSpeed: 200,
+            showType: 'fade'// null、slide、fade、show
+        });
+
+        $("#dd").dialog({
+            modal: true,
+            title: "提示",
+            collapsible: true,
+            minimizable: true,
+            maximizable: true,
+            resizable: true,
+            toolbar:null,
+            buttons:null
+        });
+    </script>
+</body>
+</html>
