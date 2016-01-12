@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Easy UI Panel</title>
+    <meta charset="utf-8" />
+    <script src="../jquery-easyui-1.4.4/jquery.min.js"></script>
+    <script src="../jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
+    <link href="../jquery-easyui-1.4.4/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../jquery-easyui-1.4.4/themes/icon.css" rel="stylesheet" />
+</head>
+    
+<body>
+    <div id="mypanel" class="easyui-panel">
+        <div id="win" class="easyui-window" style="width:250px ;height:250px" title="windows">
+            123
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#mypanel').panel({
+            title: 'My Panel',
+            iconCls: 'icon-ok',
+            width: 300,
+            height: 600,
+            left: 100,
+            top: 100,
+            loadingMessage:'loading---',
+            fit:false,
+            tools: [{
+                iconCls: 'icon-edit',
+                handler: function () {
+                    $.messager.alert("warning","message",'warning')
+                }
+            },{
+                iconCls:'icon-save',
+                handler: function () {
+                    $.messager.confirm('note', 'messsage', function (b) {
+                        if(b)
+                        {
+                            $.messager.alert("OK", "message", 'OK')
+                        } else {
+                            $.messager.alert("warning", "message", 'warning')
+                        }
+                    })
+                }
+        }]
+        });
+
+
+
+
+        //$('#mypanel').panel('move', {
+        //    left: 100,
+        //    top: 100
+        //});
+
+    </script>
+</body>
+</html>
